@@ -1,0 +1,233 @@
+---
+id: stl-editorials
+title: Editorials to STL practice problems
+sidebar_label: Editorials to STL practice problems
+description: Editorials to STL practice problems by cyberlabs
+---
+
+:::caution
+
+Don’t read the editorial, if you have not attempted or read the problem. It would hamper your thinking capability, if you do so.
+
+:::
+
+## Hackerrank
+
+1. [Deque STL](https://www.hackerrank.com/challenges/deque-stl/problem)
+
+  <details style={{marginLeft:'40px'}}><summary style={{cursor:'pointer'}}>Editorial</summary>
+  <p>
+
+  You need to give a O(N) solution. You can see the approach using a deque or queue here :<br/>
+[See the Queue modification (method 1) here](https://cp-algorithms.com/data_structures/stack_queue_modification.html#toc-tgt-1)
+
+  </p>
+  </details>
+
+2. [Queries with fixed length](https://www.hackerrank.com/challenges/queries-with-fixed-length/problem)
+
+  <details style={{marginLeft:'40px'}}><summary style={{cursor:'pointer'}}>Editorial</summary>
+  <p>
+
+  See above problem’s editorial , as it is almost the same question, with a slight modification.
+
+  </p>
+  </details>
+
+3. [Balanced Brackets](https://www.hackerrank.com/challenges/balanced-brackets/problem)
+
+  <details style={{marginLeft:'40px'}}><summary style={{cursor:'pointer'}}>Editorial</summary>
+  <p>
+
+    We can use a stack to solve such kinds of problems. <br/> Let's define  &#123;, (, and [ as opening brackets and  &#125;, ), and ] as closing brackets. <br/> Algorithm:
+
+    - Whenever an opening bracket appears, we push it onto the stack.
+    - If a closing bracket appears and if it matches the opening bracket at the top of the stack, it means that the brackets are balanced and we pop the opening bracket out of the stack and continue analyzing the string.
+    - If the closing bracket doesn't match the opening bracket at the top of the stack (or the stack is empty at that stage), we can infer that the string is not balanced, and we print NO.
+    - After processing the string completely and if the stack is empty, the string is balanced, and we print YES, else, we print NO
+
+  </p>
+  </details>
+
+## SPOJ
+
+1. [HISTOGRA - Largest Rectangle in a Histogram](https://www.spoj.com/problems/HISTOGRA/)
+
+  <details style={{marginLeft:'40px'}}><summary style={{cursor:'pointer'}}>Editorial</summary>
+  <p>
+
+  You can use a stack, to calculate the largest rectangle area in a histogram, in just O(N) time complexity. <br/>
+  First , think of a naive or brute-force approach, to understand the efficient solution.<br/>
+  For each bar, we can find the rectangle with the height of it and also containing it.<br/>
+  To do this for a bar, let's say  <img src="https://render.githubusercontent.com/render/math?math=i^{th}"/> bar, we go to left from <img src="https://render.githubusercontent.com/render/math?math=i"/> and stop at the first bar which is smaller than the <img src="https://render.githubusercontent.com/render/math?math=i^{th}"/> bar. Say we have stopped at  <img src="https://render.githubusercontent.com/render/math?math=j^{th}"/>  position. <br/>
+  Then, we move to the right of  <img src="https://render.githubusercontent.com/render/math?math=i"/>  and stop at the bar which is smaller than  <img src="https://render.githubusercontent.com/render/math?math=i^{th}"/>  bar. Say we have stopped at   <img src="https://render.githubusercontent.com/render/math?math=k^{th}"/>   bar.<br/>
+  <b>So, the rectangle containing <img src="https://render.githubusercontent.com/render/math?math=i^{th}"/> bar and of its height will have width from position <img src="https://render.githubusercontent.com/render/math?math=j"/> to <img src="https://render.githubusercontent.com/render/math?math=k"/> (exclusive). The width will be <img src="https://render.githubusercontent.com/render/math?math=k-j-1"/></b><br/>
+  We can calculate the area of this rectangle for each bar and take the maximum. That will be our answer. But it has a time complexity of <img src="https://render.githubusercontent.com/render/math?math=O(N^2)"/> in the worst case, which may give TLE here.<br/>
+  Now, to reduce the time complexity, we will use a stack here, in such a way that we maintain the heights of bars in the stack, in an increasing order.  And also, we will push the index of bar to the stack, instead of height. Now, think of some approach, using this stack, by your own. Still if you didn’t get it, you can <a href="https://www.youtube.com/watch?v=ZmnqCZp9bBs"> watch this video for explanation</a>. Thus, we can easily solve this problem in <img src="https://render.githubusercontent.com/render/math?math=O(N)"/> time complexity.
+
+  </p>
+  </details>
+
+## Codeforces
+
+1. [782/A - Andryusha and Socks](https://codeforces.com/problemset/problem/782/A)
+
+  <details style={{marginLeft:'40px'}}><summary style={{cursor:'pointer'}}>Editorial</summary>
+  <p>
+
+  **Pre-requisite** : Set / Map<br/>
+  **Explanation** : Our task is here to check weather a sock of same type is already on the table or not, and note the no of socks on it and output maximum of all our readings of no socks.<br/>
+  Here it is given that the index of sock is &leq;100000 thus you can also make an zero array and each time check if it zero or not (i.e checking weather a socks is on table or not.)<br/>
+  But if index very large or something else as string ,char etc then it better to use set here.
+
+  </p>
+   </details>
+
+2. [22/A- Second Order Statistics](https://codeforces.com/problemset/problem/22/A)
+  <details style={{marginLeft:'40px'}}><summary style={{cursor:'pointer'}}>Editorial</summary>
+  <p>
+
+  [View here](https://codeforces.com/blog/entry/507)
+
+  </p>
+  </details>
+
+3. [704/A - Thor](http://codeforces.com/problemset/problem/704/A)
+
+  <details style={{marginLeft:'40px'}}><summary style={{cursor:'pointer'}}>Editorial</summary>
+    <p>
+
+    **Prerequisite** : STL queue, map<br/>
+    **Explanation** :
+
+    Consider a queue e for every application and also a queue Q for the notification bar.
+
+    i. When an event of the first type happens, increase the number of unread notifications by 1 and push pair (i, x) to Q where i is the index of this event among events of the first type, and also push number i to queue e[x].
+
+    ii. When a second type event happens, mark all numbers in queue e[x] as visited,clear this queue and decrease the number of unread notifications by the number of elements in this queue before clearing.
+
+    iii. When a third type query happens, do the following -
+
+    ```python
+    while Q is not empty and Q.front().first<=t:
+      i = Q.front().first
+      x= Q.front().second
+      Q.pop()
+            if mark[i] is false:
+        Mark[i] = true
+      e[v].pop()
+      ans = ans - 1
+    ```
+
+    </p>
+   </details>
+
+4. [546/C - Soldier and Cards](https://codeforces.com/problemset/problem/546/C)
+
+  <details style={{marginLeft:'40px'}}><summary style={{cursor:'pointer'}}>Editorial</summary>
+    <p>
+
+    **Pre-requisite** : Vector / Map<br/>
+    **Explanation** : Firstly let's count a number of different states that we can have in the game. Cards can be arranged in any one of n! ways. In every of this combination, we must separate first soldier's cards from the second one's. We can separate it in n + 1 places .
+
+    So war has (n + 1)! states. If we'd do (n + 1)! "fights" and we have not finished the game yes, then we'll be sure that there is a state, that we passed at least twice. That means that we have a cycle, and game won't end. Otherwise , the game would end simply with one soldier having empty set.
+    Since , n is very small one can use the above brute force method , so the time complexity will be O(n*(n+1)!). The other n is used by map to check the repetition of the states.
+
+    One can use vectors to represent states of the soldiers. In every fight do as said in the problem and store the states . Also keep the count of no. of fights. If any of the state gets repeated , then the game would end in an infinite loop, hence print -1 and end the game. If at any instant either of the vectors is empty , the other soldier wins .
+
+    To keep count of the states, one can use stl::map of a pair of vectors , where the first vector would represent the set of cards of soldier 1 and the second vector for soldier 2. One can map the pair of vector with bool values which represent whether that state is already visited or not.
+
+    </p>
+   </details>
+
+5. [799/B - T-shirt buying](https://codeforces.com/problemset/problem/799/B)
+
+  <details style={{marginLeft:'40px'}}><summary style={{cursor:'pointer'}}>Editorial</summary>
+    <p>
+
+    **Explanation** :<br/>
+    Let the colour of T-shirt  which buyer wants be x. So our task is to find the T-shirt having that colour on any of back or front side and remove it from our available collection of T-shirts.
+
+    Here as our collection of data from which we want to select minimum is dynamic( i.e it is updating after removing each T-shirt) ,so we will use priority_queue that have both update and query(for minimum) in O(log(n)) time complexity;
+
+    We can use priority_queue of pair ```<prize_of_t-shirt , index_of_T-shirt>``` , as by default the ordering is on the basis of first element and we can use index of T-shirt to remove it from collection.
+
+  </p>
+   </details>
+
+6. [1353/D - Constructing the Array](https://codeforces.com/contest/1353/problem/D)
+
+  <details style={{marginLeft:'40px'}}><summary style={{cursor:'pointer'}}>Editorial</summary>
+    <p>
+
+    **Prerequisite** : Priority queue or Set , Creating your own comparator functions<br/>
+    **Explanation** :
+    Create a priority queue to store segments, such that the segment having the greatest length is always at the top of priority queue. (If 2 segments have same length, the one with leftmost starting point will be at the top, as per given question)<br/>
+    Now, perform the sequence of operations, as given in the problem.<br/>
+    **Time Complexity** : O(N log N), where N = size of array<br/>
+    [ Since, insertion and deletion in priority queue takes only O( log N ) ]<br/>
+    **Code** : [https://codeforces.com/contest/1353/submission/80121041](https://codeforces.com/contest/1353/submission/80121041)
+
+    </p>
+  </details>
+
+  7. [733/D - Kostya the Sculptor](https://codeforces.com/contest/733/problem/D)
+
+  <details style={{marginLeft:'40px'}}><summary style={{cursor:'pointer'}}>Editorial</summary>
+    <p>
+
+    **Prerequisite** : Map, Iterators in STL<br/>
+    **Explanation** : <br/>
+    It‌ ‌is‌ ‌clear‌ ‌that‌ ‌radius‌ ‌of‌ ‌sphere‌ ‌with‌ ‌rectangle‌ ‌of‌ ‌sides‌ ‌(a,b,c)‌ ‌ will‌ ‌be‌ ‌min(a,b,c)/2‌ ‌and‌ ‌if‌ ‌two‌ ‌parallelepipeds‌ ‌exist‌ ‌with‌ ‌two‌ ‌same‌ ‌side‌ ‌(a,b)‌ ‌then‌ ‌after‌ glueing‌ ‌these‌ ‌two‌ ‌together‌ ‌,‌ ‌radius‌  ‌will‌ ‌be‌ ‌min(a,b,c1+c2)/2.‌ ‌<br/>
+    For‌  ‌every‌ ‌pair‌ ‌(a,b)‌ ‌let‌ ‌us‌ ‌find‌ ‌maximal‌ ‌adjacent‌ ‌sides‌ ‌c1‌ ‌and‌ ‌c2‌ ‌
+    ,then‌ ‌we‌ ‌will‌ ‌check‌ ‌for‌ ‌which‌ ‌pair(a,b)‌  ‌min(a,b,c1+c2)‌  ‌is‌ ‌
+    maximum.‌ ‌<br/>
+    We‌ ‌can‌ ‌make‌ ‌a‌ ‌map‌ ‌of‌ ‌pair‌ ‌to‌ ‌(vector‌ ‌of‌ ‌pair)‌ ‌.‌ ‌In‌ ‌which‌ ‌for‌ ‌every‌ ‌
+    distinct‌ ‌pair‌ ‌(a,b)‌ ‌we‌ ‌store‌ ‌what‌ ‌is‌ ‌the‌ ‌third‌ ‌side‌ ‌and‌ ‌
+    corresponding‌ ‌index.‌ <br/> ‌
+    Then‌ ‌we‌ ‌iterate‌ ‌through‌ ‌the‌ ‌map‌ ‌and‌ ‌find‌ ‌maximal‌ ‌c1‌ ‌and‌ ‌c2‌ ‌for‌ ‌
+    every‌ ‌pair‌ ‌(a,b).‌ ‌<br/>
+    Then‌ ‌we‌ ‌find‌ ‌for‌ ‌which‌ ‌pair‌ ‌min(a,b,c1+c2)‌ ‌is‌ ‌maximum‌ ‌and‌ ‌
+    output‌ ‌the‌ ‌corresponding‌ ‌answer.‌ <br/> ‌
+    **NOTE**:‌ ‌Do‌ ‌not‌  ‌forget‌ ‌when‌ ‌there‌ ‌is‌ ‌only‌ ‌one‌ ‌maximal‌ ‌side‌ ‌for‌ ‌
+    pair‌ ‌(a,b)‌.‌
+
+    </p>
+  </details>
+
+8. [4/C - Registration system](http://codeforces.com/problemset/problem/4/C)
+
+  <details style={{marginLeft:'40px'}}><summary style={{cursor:'pointer'}}>Editorial</summary>
+  <p>
+
+  **Pre-requisite** : Map<br/>
+  **Explanation** :  We can clearly see than n ≤ 10^5, that is a naive approach of O(n^2) will not pass. We need a better solution. <br/>
+  Here using STL map will make our task easy. <br/>
+  We can make a map of string and int where string will contain the name of person while int will contain the count. <br/>
+  We know that by default map are initialized with zero. <br/>
+  So if the count of a string is zero print OK and increase its counter by 1 else print the string and the count of string and increase its counter by 1.
+
+  </p>
+   </details>
+
+## Codechef
+
+1. [ANUUND - Ups and Downs](https://www.codechef.com/problems/ANUUND)
+
+  <details style={{marginLeft:'40px'}}><summary style={{cursor:'pointer'}}>Editorial</summary>
+  <p>
+
+  [View here](https://discuss.codechef.com/t/anuund-editorial/5472)
+
+  </p>
+  </details>
+
+2. [ANUMLA - Mahesh and his lost array](https://www.codechef.com/COOK51/problems/ANUMLA)
+
+  <details style={{marginLeft:'40px'}}><summary style={{cursor:'pointer'}}>Editorial</summary>
+  <p>
+
+  [View here](https://discuss.codechef.com/t/anumla-editorial/7713)
+
+  </p>
+  </details>
