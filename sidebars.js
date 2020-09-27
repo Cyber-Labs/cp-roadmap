@@ -19,6 +19,9 @@ module.exports = {
       'roadmap/binary-search/binary-search-tutorials',
       'roadmap/binary-search/binary-search-problems',
     ],
-    'Graph Theory': ['roadmap/graphs'],
+    'Graph Theory': [
+      'roadmap/graphs/graph-tutorials',
+      'roadmap/graphs/graph-problems',
+    ],
   },
 };

@@ -72,6 +72,10 @@ module.exports = {
               label: 'Binary Search',
               to: 'docs/roadmap/binary-search/binary-search-tutorials',
             },
+            {
+              label: 'Graph Theory',
+              to: 'docs/roadmap/graphs/graph-tutorials',
+            },
           ],
         },
         {

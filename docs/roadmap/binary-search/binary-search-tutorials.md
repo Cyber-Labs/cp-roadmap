@@ -23,4 +23,6 @@ description: Binary Search Tutorials by cyberlabs
 
 ## Session slides
 
-- The whiteboard slides, used during session on Binary search, are available [here](https://drive.google.com/file/d/1iMdFkRyPKw7YjXGNzCh002QbHWGM-VK9/view?usp=sharing)
+- The whiteboard slides, used during the session on Binary search, are available [here](https://drive.google.com/file/d/1iMdFkRyPKw7YjXGNzCh002QbHWGM-VK9/view?usp=sharing)
+
+- The whiteboard slides, used during the session on Ternary search, are available [here](https://drive.google.com/file/d/18WOB_HSEK2nBZFlM0fsL46g_dRlbEFBa/view?usp=sharing)

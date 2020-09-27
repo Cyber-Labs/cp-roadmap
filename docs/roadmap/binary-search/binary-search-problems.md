@@ -7,8 +7,8 @@ description: Binary Search practice problems by cyberlabs
 
 ## Binary search
 
-1. [AGGRCOW - Aggressive cows](https://www.spoj.com/problems/AGGRCOW/)
-2. [PIHU1 - Love Story 1](https://www.spoj.com/problems/PIHU1/)
+1. [BSEARCH1 - Binary search](https://www.spoj.com/problems/BSEARCH1/)
+2. [AGGRCOW - Aggressive cows](https://www.spoj.com/problems/AGGRCOW/)
 3. [EKO - Eko](https://www.spoj.com/problems/EKO/)
 4. [NOTATRI - Not a Triangle](https://www.spoj.com/problems/NOTATRI/)
 5. [HACKRNDM - Hacking the random number generator](https://www.spoj.com/problems/HACKRNDM/)
