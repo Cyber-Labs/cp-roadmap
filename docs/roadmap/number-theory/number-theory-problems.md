@@ -43,6 +43,7 @@ description: Number Theory practice problems by cyberlabs
 4. [COZIE](https://www.codechef.com/problems/COZIE)
 5. [SMPLSUM](https://www.codechef.com/problems/SMPLSUM)
 6. [LCMSUM - LCM Sum](https://www.spoj.com/problems/LCMSUM/)
+7. [Find a^(b^c) mod (10^9+7)](https://cses.fi/problemset/task/1712)
 
 ## Combinatorics Problems
 

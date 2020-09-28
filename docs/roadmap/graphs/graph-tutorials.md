@@ -13,7 +13,7 @@ description: Best Resources for graph theory by cyberlabs
   (i) [Hackerearth article on BFS](https://www.hackerearth.com/practice/algorithms/graphs/breadth-first-search/tutorial/)<br/>
   (ii) [CP-Algorithms article on BFS and its applications](https://cp-algorithms.com/graph/breadth-first-search.html)
 
-3. Read the following articles for Depth First Search (BFS) :<br/>
+3. Read the following articles for Depth First Search (DFS) :<br/>
   (i) [Hackerearth article on DFS](https://www.hackerearth.com/practice/algorithms/graphs/depth-first-search/tutorial/)<br/>
   (ii) [CP-Algorithms article on DFS and its applications](https://cp-algorithms.com/graph/depth-first-search.html)
 
