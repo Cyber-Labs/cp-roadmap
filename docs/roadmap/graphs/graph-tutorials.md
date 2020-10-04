@@ -40,9 +40,17 @@ description: Best Resources for graph theory by cyberlabs
 Do note the time and space complexities and the limitations of each method.
 :::
 
+## Minimum Spanning Tree (MST)
+
+- Go through [this article](https://www.hackerearth.com/practice/algorithms/graphs/minimum-spanning-tree/tutorial/) for both Kruska's and Prim's algorithm.
+
 ## Session slides
 
-- The whiteboard slides, used during the session on basics of graph, graph representation and BFS, are available [here](https://drive.google.com/file/d/18WOB_HSEK2nBZFlM0fsL46g_dRlbEFBa/view)
+- Slides for basics of graph, graph representation and BFS, are available [here](https://drive.google.com/file/d/18WOB_HSEK2nBZFlM0fsL46g_dRlbEFBa/view)
+
+- Slides for topo sort and SCC are available [here](https://drive.google.com/file/d/1rk-IvUknpE4RCj8J6S6iL09Y8egV58gA/view?usp=sharing)
+
+- Slides for shortest-path algo, graph modeling and MST are available [here](https://drive.google.com/file/d/1BuhFA3AqVv7tyH4RG8cxlIhyReTkOPtW/view?usp=sharing)
 
 ## Additional Resource
 
