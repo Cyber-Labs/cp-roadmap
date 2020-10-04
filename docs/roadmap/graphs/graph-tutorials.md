@@ -10,13 +10,13 @@ description: Best Resources for graph theory by cyberlabs
 1. Read [hackerearth article for basic terminology and graph representation](https://www.hackerearth.com/practice/algorithms/graphs/graph-representation/tutorial/)
 
 2. Read the following articles for Breadth First Search (BFS) :<br/>
-  (i) [Hackerearth article on BFS](https://www.hackerearth.com/practice/algorithms/graphs/breadth-first-search/tutorial/)<br/>
-  (ii) [CP-Algorithms article on BFS and its applications](https://cp-algorithms.com/graph/breadth-first-search.html)
+   (i) [Hackerearth article on BFS](https://www.hackerearth.com/practice/algorithms/graphs/breadth-first-search/tutorial/)<br/>
+   (ii) [CP-Algorithms article on BFS and its applications](https://cp-algorithms.com/graph/breadth-first-search.html)
 
 3. Read the following articles for Depth First Search (DFS) :<br/>
-  (i) [Hackerearth article on DFS](https://www.hackerearth.com/practice/algorithms/graphs/depth-first-search/tutorial/)<br/>
-  (ii) [CP-Algorithms article on DFS and its applications](https://cp-algorithms.com/graph/depth-first-search.html)
-  (iii) [DFS using standard color coding and calculating discovery and finish times](https://www.gatevidyalay.com/depth-first-search-dfs-algorithm/) 
+   (i) [Hackerearth article on DFS](https://www.hackerearth.com/practice/algorithms/graphs/depth-first-search/tutorial/)<br/>
+   (ii) [CP-Algorithms article on DFS and its applications](https://cp-algorithms.com/graph/depth-first-search.html)<br/>
+   (iii) [DFS using standard color coding and calculating discovery and finish times](https://www.gatevidyalay.com/depth-first-search-dfs-algorithm/)
 
 ## Topological Sort
 
@@ -24,7 +24,7 @@ description: Best Resources for graph theory by cyberlabs
 
 ## Strongly Connected Components (SCC)
 
-1. Go through [this article](https://www.hackerearth.com/practice/algorithms/graphs/strongly-connected-components/tutorial/) for Kosaraju's algorithm to find SCC 
+1. Go through [this article](https://www.hackerearth.com/practice/algorithms/graphs/strongly-connected-components/tutorial/) for Kosaraju's algorithm to find SCC
 2. For C++ implementation of the algorithm to find SCC, refer [this article](https://cp-algorithms.com/graph/strongly-connected-components.html)
 
 ## Disjoint Set Union (DSU)
@@ -34,7 +34,11 @@ description: Best Resources for graph theory by cyberlabs
 
 ## Shortest Path Algorithms
 
-1. Read [this article](https://www.hackerearth.com/practice/algorithms/graphs/shortest-path-algorithms/tutorial/) for the implementation of the standard shortest path algorithms - Dijkstra, Bellman Ford and Floyd Warshall. Do note their time and space complexities and their limitations.
+- Read [this article](https://www.hackerearth.com/practice/algorithms/graphs/shortest-path-algorithms/tutorial/) for the implementation of the standard shortest path algorithms - Dijkstra, Bellman Ford and Floyd Warshall. <br/>
+
+:::tip
+Do note the time and space complexities and the limitations of each method.
+:::
 
 ## Session slides
 
@@ -42,4 +46,4 @@ description: Best Resources for graph theory by cyberlabs
 
 ## Additional Resource
 
--  Sometimes, in problems, we need to construct a state graph out of the given graphs and then, apply any standard algorithm, to solve the problem. This technique is known as **Graph Modelling**. Refer [this blog](https://codeforces.com/blog/entry/45897) for more about it and some solved example problems.
+- Sometimes, in problems, it is required to construct a state graph out of the given graphs and then, apply any standard algorithm, to solve the problem. This technique is known as **Graph Modelling**. Refer [this blog](https://codeforces.com/blog/entry/45897) for more about it and some solved example problems.
