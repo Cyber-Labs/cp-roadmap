@@ -25,7 +25,7 @@ description: Binary Search practice problems by cyberlabs
 16. [448/D - Multiplication Table](https://codeforces.com/problemset/problem/448/D)
 17. [779/D - String Game](https://codeforces.com/contest/779/problem/D)
 18. [1029/F - Multicolored Markers](https://codeforces.com/contest/1029/problem/F)
-19. [1409/E  - Two Platforms](https://codeforces.com/problemset/problem/1409/E)
+19. [1409/E - Two Platforms](https://codeforces.com/problemset/problem/1409/E)
 20. [1359/C - Mixing water](https://codeforces.com/problemset/problem/1359/C)
 
 ## Ternary search
