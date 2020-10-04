@@ -16,7 +16,30 @@ description: Best Resources for graph theory by cyberlabs
 3. Read the following articles for Depth First Search (DFS) :<br/>
   (i) [Hackerearth article on DFS](https://www.hackerearth.com/practice/algorithms/graphs/depth-first-search/tutorial/)<br/>
   (ii) [CP-Algorithms article on DFS and its applications](https://cp-algorithms.com/graph/depth-first-search.html)
+  (iii) [DFS using standard color coding and calculating discovery and finish times](https://www.gatevidyalay.com/depth-first-search-dfs-algorithm/) 
+
+## Topological Sort
+
+1. Go through [the hackerearth article](https://www.hackerearth.com/practice/algorithms/graphs/topological-sort/tutorial/) or [CP-Algorithms article](https://cp-algorithms.com/graph/topological-sort.html) for topological sort
+
+## Strongly Connected Components (SCC)
+
+1. Go through [this article](https://www.hackerearth.com/practice/algorithms/graphs/strongly-connected-components/tutorial/) for Kosaraju's algorithm to find SCC 
+2. For C++ implementation of the algorithm to find SCC, refer [this article](https://cp-algorithms.com/graph/strongly-connected-components.html)
+
+## Disjoint Set Union (DSU)
+
+1. Go through [this article](https://www.hackerearth.com/practice/notes/disjoint-set-union-union-find/) for DSU and its implementation.
+2. For more applications of DSU, refer [this article](https://cp-algorithms.com/data_structures/disjoint_set_union.html)
+
+## Shortest Path Algorithms
+
+1. Read [this article](https://www.hackerearth.com/practice/algorithms/graphs/shortest-path-algorithms/tutorial/) for the implementation of the standard shortest path algorithms - Dijkstra, Bellman Ford and Floyd Warshall. Do note their time and space complexities and their limitations.
 
 ## Session slides
 
 - The whiteboard slides, used during the session on basics of graph, graph representation and BFS, are available [here](https://drive.google.com/file/d/18WOB_HSEK2nBZFlM0fsL46g_dRlbEFBa/view)
+
+## Additional Resource
+
+-  Sometimes, in problems, we need to construct a state graph out of the given graphs and then, apply any standard algorithm, to solve the problem. This technique is known as **Graph Modelling**. Refer [this blog](https://codeforces.com/blog/entry/45897) for more about it and some solved example problems.
