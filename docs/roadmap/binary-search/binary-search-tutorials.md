@@ -17,7 +17,7 @@ description: Binary Search Tutorials by cyberlabs
 
 :::tip
 
-**Note**: Ternary search problems can also be solved using binary search, by considering the function ```g(x) = f(x) > f(x-1)``` as a monotonic function. See [this blog](https://codeforces.com/blog/entry/11497) for more details.
+**Note**: Ternary search problems can also be solved using binary search, by considering the function `g(x) = f(x) > f(x-1)` as a monotonic function. See [this blog](https://codeforces.com/blog/entry/11497) for more details.
 
 :::
 
@@ -26,3 +26,7 @@ description: Binary Search Tutorials by cyberlabs
 - The whiteboard slides, used during the session on Binary search, are available [here](https://drive.google.com/file/d/1iMdFkRyPKw7YjXGNzCh002QbHWGM-VK9/view?usp=sharing)
 
 - The whiteboard slides, used during the session on Ternary search, are available [here](https://drive.google.com/file/d/18WOB_HSEK2nBZFlM0fsL46g_dRlbEFBa/view?usp=sharing)
+
+## Additional resources
+
+- Watch [this series of 5 short lectures on Binary search](https://codeforces.com/edu/course/2/lesson/6) by codeforces
