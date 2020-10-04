@@ -19,7 +19,7 @@ description: practice problems for graph theory by cyberlabs
 10. [SPOJ PRIME PATH](https://www.spoj.com/problems/PPATH/)
 11. [Chef and Friends](https://www.codechef.com/problems/CHFNFRN)
 12. [SPOJ MOUSE AND CATS](https://www.spoj.com/problems/CATM/)
-13. [SPOJ  Labyrinth](https://www.spoj.com/problems/LABYR1/)
+13. [SPOJ Labyrinth](https://www.spoj.com/problems/LABYR1/)
 14. [1388/C - Uncle Bogdan and Country Happiness](https://codeforces.com/problemset/problem/1388/C)
 15. [1027/C - Mouse Hunt](https://codeforces.com/problemset/problem/1027/D)
 16. [1217/D - Coloring Edges](https://codeforces.com/problemset/problem/1217/D)
@@ -32,20 +32,36 @@ description: practice problems for graph theory by cyberlabs
 ## Topological Sort
 
 1. [TOPOSORT](https://www.spoj.com/problems/TOPOSORT)
-2. [Fox and Names](https://codeforces.com/contest/510/problem/C)
+2. [510/C - Fox and Names](https://codeforces.com/contest/510/problem/C)
 3. [Stable Wall](https://codingcompetitions.withgoogle.com/kickstart/round/000000000019ff43/00000000003379bb)
 4. [Lonely Island](https://www.hackerearth.com/practice/algorithms/graphs/topological-sort/practice-problems/algorithm/lonelyisland-49054110)
 
 ## Strongly Connected Components (SCC)
 
 1. [A Walk to Remember](https://www.hackerearth.com/practice/algorithms/graphs/strongly-connected-components/practice-problems/algorithm/a-walk-to-remember-qualifier2/)
-2. [CAPCITY](https://www.spoj.com/problems/CAPCITY/)
-3. [Reachability from the Capital](https://codeforces.com/problemset/problem/999/E)
-4. [BREAK](https://www.spoj.com/problems/BREAK/)
-5. [Fix A Tree](https://codeforces.com/problemset/problem/698/B)
-6. [pSort](https://codeforces.com/problemset/problem/28/B)
-7. [Swaps In Permutation](https://codeforces.com/problemset/problem/691/D)
-8. [Love Rescue](https://codeforces.com/problemset/problem/939/D)
-9. [New Year Permutation](https://codeforces.com/problemset/problem/500/B)
-10. [Asya And Kittens](https://codeforces.com/problemset/problem/1131/F)
+2. [SPOJ CAPCITY](https://www.spoj.com/problems/CAPCITY/)
+3. [999/E - Reachability from the Capital](https://codeforces.com/problemset/problem/999/E)
+4. [SPOJ BREAK](https://www.spoj.com/problems/BREAK/)
 
+## Disjoint Set Union (DSU)
+
+1. [Components in a graph](https://www.hackerrank.com/challenges/components-in-graph/problem)
+2. [698/B - Fix A Tree](https://codeforces.com/problemset/problem/698/B)
+3. [Merging Communities](https://www.hackerrank.com/challenges/merging-communities/problem)
+4. [28/B - pSort](https://codeforces.com/problemset/problem/28/B)
+5. [691/D - Swaps In Permutation](https://codeforces.com/problemset/problem/691/D)
+6. [939/D - Love Rescue](https://codeforces.com/problemset/problem/939/D)
+7. [500/B - New Year Permutation](https://codeforces.com/problemset/problem/500/B)
+8. [1131/F - Asya And Kittens](https://codeforces.com/problemset/problem/1131/F)
+
+## Shortest Paths
+
+1. [Dijkstra ?](https://codeforces.com/contest/20/problem/C)
+2. [Saving Ms. W](https://www.hackerearth.com/practice/algorithms/graphs/shortest-path-algorithms/practice-problems/algorithm/saving-ms-w-7b3d36df/)
+3. [Shortest Path revisited](https://www.hackerearth.com/practice/algorithms/graphs/shortest-path-algorithms/practice-problems/algorithm/shortest-path-revisited-9e1091ea/)
+
+## Minimum Spanning Tree (MST)
+
+1. [Friendless Dr. Sheldon Cooper](https://www.hackerearth.com/practice/algorithms/graphs/minimum-spanning-tree/practice-problems/algorithm/friendless-dr-sheldon-cooper-14/)
+2. [Travelling Tom](https://www.hackerearth.com/practice/algorithms/graphs/minimum-spanning-tree/practice-problems/algorithm/travelling-tom-7eadedb7/)
+3. [160/D - Edges in MST](https://codeforces.com/contest/160/problem/D)
