@@ -50,6 +50,12 @@ module.exports = {
         },
       ],
     },
+    algolia: {
+      apiKey: 'efa073bae52f1aee1d50007d26ee7f9b',
+      indexName: 'dev_CP',
+      appId: 'K602RCS7E1',
+      // searchParameters: {}, // Optional (if provided by Algolia)
+    },
     footer: {
       style: 'dark',
       links: [
@@ -162,4 +168,4 @@ module.exports = {
       },
     ],
   ],
-};
+}
