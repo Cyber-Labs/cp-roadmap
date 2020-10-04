@@ -28,3 +28,19 @@ description: practice problems for graph theory by cyberlabs
 19. [1352/F - Binary String Reconstruction](https://codeforces.com/problemset/problem/1352/F)
 20. [1336/A - Linova and Kingdom](https://codeforces.com/problemset/problem/1336/A)
 21. [1249/B2 - Books Exchange](https://codeforces.com/problemset/problem/1249/B2)
+
+## Topological Sort
+
+1. [TOPOSORT](https://www.spoj.com/problems/TOPOSORT)
+2. [Fox and Names](https://codeforces.com/contest/510/problem/C)
+3. [Stable Wall](https://codingcompetitions.withgoogle.com/kickstart/round/000000000019ff43/00000000003379bb)
+4. [Lonely Island](https://www.hackerearth.com/practice/algorithms/graphs/topological-sort/practice-problems/algorithm/lonelyisland-49054110)
+
+## Strongly Connected Components (SCC)
+
+1. [A Walk to Remember](https://www.hackerearth.com/practice/algorithms/graphs/strongly-connected-components/practice-problems/algorithm/a-walk-to-remember-qualifier2/)
+2. [CAPCITY](https://www.spoj.com/problems/CAPCITY/)
+3. [Reachability from the Capital](https://codeforces.com/problemset/problem/999/E)
+4. [BREAK](https://www.spoj.com/problems/BREAK/)
+
+
