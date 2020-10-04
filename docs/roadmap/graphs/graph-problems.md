@@ -42,5 +42,10 @@ description: practice problems for graph theory by cyberlabs
 2. [CAPCITY](https://www.spoj.com/problems/CAPCITY/)
 3. [Reachability from the Capital](https://codeforces.com/problemset/problem/999/E)
 4. [BREAK](https://www.spoj.com/problems/BREAK/)
-
+5. [Fix A Tree](https://codeforces.com/problemset/problem/698/B)
+6. [pSort](https://codeforces.com/problemset/problem/28/B)
+7. [Swaps In Permutation](https://codeforces.com/problemset/problem/691/D)
+8. [Love Rescue](https://codeforces.com/problemset/problem/939/D)
+9. [New Year Permutation](https://codeforces.com/problemset/problem/500/B)
+10. [Asya And Kittens](https://codeforces.com/problemset/problem/1131/F)
 
