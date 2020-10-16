@@ -1,11 +1,5 @@
 ## How to contribute
 
-### Did you find a bug or want to request a feature ?
-
-- Ensure the bug was not already reported by searching on GitHub under [Issues](https://github.com/Cyber-Labs/cp-roadmap/issues).
-- If you're unable to find an open issue addressing the problem, open a new one.
-  Be sure to include a title and clear description, as much relevant information as possible.
-
 ### Do you want to add more resources on a particular page, already present on the [website](http://cp.cyberlabs.club/) ?
 
 You may chose to update that particular page by either [the website UI](#Sending-a-PR-using-website-UI) or [by using git](#Sending-a-PR-using-git).
@@ -13,6 +7,16 @@ You may chose to update that particular page by either [the website UI](#Sending
 ### Do you want to add a blog post for the website or want to create a new section in the website ?
 
 You would have to [send a PR using git](#Sending-a-PR-using-website-UI)
+
+### Do you want to use some mathematical expressions in any of the pages ?
+
+For displaying mathematical expressions, we use [LaTeX](https://artofproblemsolving.com/wiki/index.php/LaTeX:Symbols). Just write the latex expression inside `$` symbols. For eg. `$x = 3$`
+
+### Did you find a bug or want to request a feature ?
+
+- Ensure the bug was not already reported by searching on GitHub under [Issues](https://github.com/Cyber-Labs/cp-roadmap/issues).
+- If you're unable to find an open issue addressing the problem, open a new one.
+  Be sure to include a title and clear description, as much relevant information as possible.
 
 ### Sending a PR using website UI
 

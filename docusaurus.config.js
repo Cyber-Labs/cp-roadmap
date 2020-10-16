@@ -1,3 +1,6 @@
+const math = require('remark-math')
+const katex = require('rehype-katex')
+
 module.exports = {
   plugins: [
     [
@@ -21,6 +24,15 @@ module.exports = {
   projectName: 'cp-roadmap',
   favicon: 'img/cl_logo.png',
   onBrokenLinks: 'throw',
+  stylesheets: [
+    {
+      href: 'https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css',
+      type: 'text/css',
+      integrity:
+        'sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X',
+      crossorigin: 'anonymous',
+    },
+  ],
   themeConfig: {
     navbar: {
       title: 'Competitive Programming',
@@ -33,6 +45,12 @@ module.exports = {
           to: 'docs/roadmap/',
           activeBasePath: 'docs/roadmap',
           label: 'Roadmap',
+          position: 'left',
+        },
+        {
+          to: 'docs/contests/2020/number-theory-and-bs',
+          activeBasePath: 'docs/contests',
+          label: 'Contests',
           position: 'left',
         },
         {
@@ -125,6 +143,10 @@ module.exports = {
               to: 'blog',
             },
             {
+              label: 'Contests',
+              to: 'docs/contests/2020/number-theory-and-bs',
+            },
+            {
               label: 'GitHub',
               href: 'https://github.com/cyber-labs',
             },
@@ -150,6 +172,9 @@ module.exports = {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           editUrl: 'https://github.com/cyber-labs/cp-roadmap/edit/master/',
+          routeBasePath: '/docs/',
+          remarkPlugins: [math],
+          rehypePlugins: [katex],
         },
         blog: {
           showReadingTime: true,

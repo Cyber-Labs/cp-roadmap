@@ -15,11 +15,11 @@ Go through these tutorials, in order :
 
 :::note
 
-Similarly, also remember the formula for **product of divisors** of a number n :
+Similarly, also remember the formula for **product of divisors** of a number $n$ :
 
-<img src="https://render.githubusercontent.com/render/math?math=product = n^{\frac{d(n)}{2}}"/>
+$n^{\frac{d(n)}{2}}$
 
-where d(n) = number of divisors of n
+where $d(n)$ = number of divisors of $n$
 :::
 
 4. [Hackerearth tutorial on modular arithmetic, GCD, modular exponentiation and Fermat's Theorem](https://www.hackerearth.com/practice/notes/number-theory-1/)
