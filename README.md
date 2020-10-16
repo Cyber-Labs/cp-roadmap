@@ -35,6 +35,7 @@ npm start
 - [blog](#blog)
 - [docs](#docs)
   - `roadmap`
+  - `contests`
   - `tools.md`
 - [src](#src)
   - `css`
@@ -51,8 +52,9 @@ npm start
 
 ### Docs
 
-- The `docs` directory contains markdown files for content of the `roadmap` and `tools` sections.
+- The `docs` directory contains markdown files for content of the `roadmap`, `contests` and `tools` sections.
 - Every document has a unique `id`
+- For displaying mathematical expressions, [LaTeX](https://artofproblemsolving.com/wiki/index.php/LaTeX:Symbols) is used. Just write the latex expression inside `$` symbols. For eg. `$x = 3$`
 - For all the files, whose link should appear in the sidebar, the details should be added in the file `sidebars.js`. For more details, refer [sidebar object](https://v2.docusaurus.io/docs/docs-introduction#sidebar-object)
 
 ### Src

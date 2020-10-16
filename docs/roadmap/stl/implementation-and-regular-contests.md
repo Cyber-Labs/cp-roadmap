@@ -15,7 +15,7 @@ description: Implementation and Regular Contests cyberlabs
 As, giving timed contests, helps to handle problems under pressure and boosts your time management skills. Give the contests on various online judges, regularly, as instructed below.
 
 :::note
-Try to **upsolve** 1 or 2 problems after every contest. This will help you to improve your problem solving skills, with every contest, at a faster pace.
+Try to **upsolve** 1 or 2 problems after every contest. This will help you to improve your problem solving skills, with every contest, at a faster pace. For tips on why upsolving is important and how to upsolve efficiently, watch [this short video](https://www.coursera.org/lecture/competitive-programming-core-skills/upsolving-8Mn6l)
 :::
 
 ### Codeforces

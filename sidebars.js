@@ -24,4 +24,7 @@ module.exports = {
       'roadmap/graphs/graph-problems',
     ],
   },
-};
+  contests: {
+    2020: ['contests/2020/number-theory-and-bs'],
+  },
+}
