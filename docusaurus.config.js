@@ -82,6 +82,10 @@ module.exports = {
               label: 'Graph Theory',
               to: 'docs/roadmap/graphs/graph-tutorials',
             },
+            {
+              label: 'Programming Techniques',
+              to: 'docs/roadmap/programming-techniques/greedy-tutorials',
+            }
           ],
         },
         {

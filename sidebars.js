@@ -23,5 +23,10 @@ module.exports = {
       'roadmap/graphs/graph-tutorials',
       'roadmap/graphs/graph-problems',
     ],
+    'Programming Techniques': [
+      'roadmap/programming-techniques/greedy-tutorials',
+      'roadmap/programming-techniques/dynamic-programming-tutorials',
+      'roadmap/programming-techniques/programming-techniques-problems',
+    ],    
   },
 };
