@@ -1,0 +1,531 @@
+---
+id: number-theory-and-bs
+title: Number Theory and Binary Search
+sidebar_label: 1. Number Theory and Binary Search
+description: Number Theory and Binary Search practice contest by cyberlabs
+---
+
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
+## Description
+
+- Topics : Number Theory, Binary Search
+- [Link to the contest](https://codeforces.com/contestInvitation/403be2a30c3c4a27382791b091ff1592f23209f9)
+
+## Editorial
+
+:::caution
+
+Don’t read the editorial, if you have not attempted or read the problems. It would hamper your thinking capability, if you do so.
+
+:::
+
+### A. [Find $x^{F(n)}$ mod m](https://codeforces.com/gym/298635/problem/A)
+
+<Tabs
+  defaultValue="problem"
+  values={[
+    { label: 'Problem', value: 'problem' },
+    { label: 'Editorial', value: 'editorial' },
+    { label: 'Code', value: 'code' },
+  ]}
+>
+<TabItem value="problem">
+
+
+Given 3 positive integers - $x$, $n$ and $m$. Find value of $x^{F(n)}$ mod $m$ . <br/>
+The function $F(n)$ is defined as the product of square of primes up to $n$ (inclusive).<br/>
+For eg. $F(5) = 2^2 \cdot 3^2 \cdot 5^2 = 900$ . <br/><br/>
+**Constraints**
+
+- $1 \leq  x,m  \leq  10^9$
+- $2 \leq  n  \leq  10^6$
+
+</TabItem>
+<TabItem value="editorial">
+
+
+Since $n  \leq  10^6$, we need to use sieve of Erasthoneses to find out all the prime numbers from 1 to $n$ in $O(n\cdot\log(\log n))$. <br /><br />
+Also, one could easily observe that the value of $F(n)$ would definitely overflow for larger values of $n$. So, we can't find $F(n)$ directly. <br /><br />
+Here, we can use the property $a^{b \cdot c} = {(a^b)}^c$ . For finding ${a^b} \bmod m$ , use binary exponentation, which works in $O(\log_2 b)$ . <br/>
+
+**Final time complexity**: $O(n \log_2 n)$
+
+</TabItem>
+<TabItem value="code">
+
+
+```cpp
+#include <bits/stdc++.h>
+#define int long long
+
+using namespace std;
+
+const int MAX = 1e6;
+
+int modulo(int a, int b, int n) {
+	// Binar exponentation to calculate a^b in O(log b)
+  int x = 1, y = a;
+  while (b > 0) {
+    if (b % 2 == 1) {
+      x = (x * y) % n;
+    }
+    y = (y * y) % n;
+    b /= 2;
+  }
+  return x % n;
+}
+
+vector<bool> is_prime(MAX + 1, 1);
+void sieve() {
+  is_prime[0] = is_prime[1] = false;
+  int i, j;
+  for (i = 2; i * i <= MAX; i++) {
+    if (is_prime[i]) {
+      for (j = i * i; j <= MAX; j = j + i) is_prime[j] = false;
+    }
+  }
+}
+
+int32_t main() {
+  int x, n, m;
+  cin >> x >> n >> m;
+  sieve();  // pre-compute all the primes
+
+  int prod = x;  // final answer would be stored in prod
+
+  for (int i = 2; i <= n; i++) {
+    if (is_prime[i]) {
+      prod = modulo(prod, i, m);
+      prod = modulo(prod, i, m);
+      // Use the property (a^b)^c = a^(b*c).
+      // Since, directly calculating F(n) first will overflow
+    }
+  }
+  cout << prod;
+  return 0;
+}
+```
+
+</TabItem>
+
+
+</Tabs>
+
+
+### B. [Simple Maths](https://codeforces.com/gym/298635/problem/B)
+
+<Tabs
+defaultValue="problem"
+values={[
+{ label: 'Problem', value: 'problem' },
+{ label: 'Editorial', value: 'editorial' },
+{ label: 'Code', value: 'code' },
+]}>
+<TabItem value="problem">
+
+
+You will be given 5 number $n$ ,$m$ , $a$ , $b$ , $c$ . You will make 3 more numbers $A$ , $B$ , $C$ from it. <br/> <br />
+$A = a \cdot m$ <br />
+$B = A \cdot (b + c)$ <br/>
+$C = 5 \cdot B + A \cdot (floor(\log_{10}{(b \cdot c)}))$ <br/><br/>
+You task is to computer $f(n)$ % $m$ where<br/>
+$f(i) = (A \cdot i^9 + i^i \cdot (B \cdot i!+1) + C \cdot i^{i^i}) \cdot f(i-1)$ <br/><br/>
+Note : $f(0) = 1$
+
+**Constraints**
+
+- $1 \leq n \leq 10^{18}$
+- $1 \leq m \leq 10^6$
+- $1 \leq a,b,c \leq 10^{12}$
+
+</TabItem>
+<TabItem value="editorial">
+  
+Since A, B and C all are multiples of m, we can say that : <br/>
+
+
+$A \bmod m = B \bmod m = C \bmod m = 0$ <br/>
+
+Thus, applying the properties of modulo arithmetic, we get :<br/>
+
+$f(i) \bmod m = (i^i \cdot f(i-1)) \bmod m$ <br/>
+
+Also note one thing, when $n >= m$ , $f(n)$ would be a multiple of m. So, in this case, $f(n) \bmod m = 0$ <br/>
+
+Only remains is the case when when $n<m$ which can be solved by the above recursive formula for $f(i)$ . <br/>
+
+For finding ${n^n} \bmod m$ , use binary exponentation, which works in $O(\log_2 n)$. <br/>
+
+**Final time complexity**: $O(m \log_2 m)$
+
+</TabItem>
+
+
+<TabItem value="code">
+
+
+```cpp
+#include <bits/stdc++.h>
+#define int long long
+#define fastio                      \
+  ios_base::sync_with_stdio(false); \
+  cin.tie(0);                       \
+  cout.tie(0);
+#define die(x) return cout << x << '\n', 0;
+
+using namespace std;
+
+typedef long long ll;
+
+ll modulo(ll a, ll b, ll n) {
+  ll x = 1, y = a;
+  while (b > 0) {
+    if (b % 2 == 1) {
+      x = (x * y) % n;  // multiplying with base
+    }
+    y = (y * y) % n;  // squaring the base
+    b /= 2;
+  }
+  return x % n;
+}
+
+int32_t main() {
+	fastio;
+    int n, m, a, b, c;
+    cin >> n >> m >> a >> b >> c;
+    if (n > m) {
+      cout<<0<<'\n';
+    } else {
+      int ans = 1;
+      for (int i = 1; i <= n; i++) {
+        ans = (ans * modulo(i, i, m)) % m;
+      }
+      cout<<ans<<'\n';
+    }
+  return 0;
+}
+```
+
+</TabItem>
+
+
+</Tabs>
+
+
+### C. [Candy Distribution](https://codeforces.com/gym/298635/problem/C)
+
+<Tabs
+defaultValue="problem"
+values={[
+{ label: 'Problem', value: 'problem' },
+{ label: 'Editorial', value: 'editorial' },
+{ label: 'Code', value: 'code' },
+]}>
+<TabItem value="problem">
+
+
+In the Town of Candyland, there are $K$ candy vendors who need to distribute candies to the kids of the town. Candyland can be represented as the x-axis where kids are standing at different $x$ coordinates, which are given to you. A vendor can only serve kids which are in his range, for example, if a vendor is placed at $X$ and his range is $E$ then all kids in the range $[X-E,X+E]$ can get candies from him. All the vendors have an equal range $E$. <br/><br/>
+Since the vendors are lazy so they want you to find the minimum range $E$ such that all the kids in Candyland can get candies.<br />
+
+**Constraints**
+
+- $1 \leq  n,k  \leq  10^4$
+- $10^{-9} \leq  X_i  \leq  10^{9}$
+
+</TabItem>
+<TabItem value="editorial">
+
+
+Clearly, if for a range $E = x$, all the kids are able to get candies, then for all ranges $E > x$, all the kids will be able to get candies. This forms a monotonic function. Thus, we can apply binary search to find the minimum value of $E$, for which all the kids are able to get candies. <br/>
+The lower-limit for $E$ would be 0 and upper-limit for $E$ can be taken as the difference of the highest and the lowest x-coordinates. <br/>
+Sort the array of x-coordinates at the beginning once. Now, in the predicate function, it becomes very easy to check whether for a given value of range $E = x$, is it possible that all kids can get candies ?
+
+</TabItem>
+<TabItem value="code">
+
+
+```cpp
+#include<bits/stdc++.h>
+using namespace std;
+
+#define int long long
+
+#define eps 0.000001
+typedef long double ld;
+
+int n,k;
+vector<ld> a;
+
+bool eval(ld x)
+{
+	// returns true, if with range x, all kids can get candies
+	// returns false, otherwise
+
+    int y = 1;
+
+    ld z = a[0] + 2*x;
+
+    for(int i = 0; i< n; i++)
+    {
+        if ( a[i] > z )
+        {
+            y++;
+            z = a[i] + 2*x;
+        }
+    }
+
+    return y<=k;
+}
+
+int32_t main()
+{
+	// For fast i/o
+    ios_base::sync_with_stdio(false);
+    cin.tie(0);
+    cout.tie(0);
+
+    cin>>n>>k;
+
+    a.clear();
+    a.resize(n);
+    for(int i =0; i<n; i++) cin>>a[i];
+
+    sort(a.begin(),a.end());
+
+    // binary search on range E
+
+    ld l,h,ans;
+
+    l = 0; // lower limit for E
+    h = a[n-1] - a[0]; // upper limit for E
+
+    while( l + eps < h )
+    {
+        ld mid = l + (h-l)/2;
+        if ( eval(mid) ) { ans = mid; h = mid; }
+        else l = mid;
+    }
+    cout<<fixed<<setprecision(6);
+    // Always use fixed and setprecision for output of floating point numbers
+    cout<<ans<<'\n';
+
+}
+```
+
+</TabItem>
+</Tabs>
+
+
+### D. [Seems to be easy xD](https://codeforces.com/gym/298635/problem/D)
+
+<Tabs
+defaultValue="problem"
+values={[
+{ label: 'Problem', value: 'problem' },
+{ label: 'Editorial', value: 'editorial' },
+{ label: 'Code', value: 'code' },
+]}>
+<TabItem value="problem">
+
+
+Given an array $A$ (having the values of all elements in range [0,2000] ) of length $N$.<br/> Each index $i ∈ [1,N]$ has an initial weight of $W_i$ units. You have to perform $Q$ queries. The queries can be of 2 types:<br/>
+
+Type $1$: $1$ $X$ <br/>
+Type $2$: $2$ $V$ $L$ $R$ <br/><br/>
+Type $1$ queries ask you to increase the weight of all indices by $X$ units.<br/>
+
+Type $2$ queries ask you to calculate the total weight contributed by elements having value $V$ in the index range $[L,R]$<br/>
+
+**Constraints**
+
+- $1 \leq  N,Q  \leq  5 \cdot 10^5$
+- $1 \leq  A_i,V  \leq  2000$
+- $0  \leq  W_i, X  \leq  100$
+- $1  \leq  L  \leq  R  \leq  N$
+
+</TabItem>
+<TabItem value="editorial">
+
+
+Maintain a variable, say $extra$ to keep track of total increment. For type $1$ queries, simply add $X$ to $extra$ .<br/>
+
+For each $i \in [0,2001]$ , maintain $2$ arrays, one array should contain the positions of elements having value $i$ and other array should contain the prefix sum of weights corresponding to the saved positions. <br/>
+
+For each query of type $2$, use binary search to get the range of indices of favourable positions in the array maintained for value $V$,
+print the difference of prefix sums for new range of <br/> $indices+count\cdot extra$ , where $count$ = count of indices in the new range.<br/>
+
+</TabItem>
+<TabItem value="code">
+
+
+```cpp
+#include<bits/stdc++.h>
+using namespace std;
+typedef long long ll;
+typedef vector <ll> vll;
+#define pb push_back
+#define all(vec) vec.begin(),vec.end()
+
+int main()
+{
+    ios_base::sync_with_stdio(0);
+    cin.tie(0);
+    cout.tie(0);
+
+    ll T;
+    cin>>T;
+
+    while(T--)
+    {
+        vector <vll> pos(2001,vll(1,0)), pre(2001,vll(1,0));
+
+        ll extra=0,n,q,i,type;
+        cin>>n>>q;
+        ll a[n],w[n];
+
+        for(ll& i:a) cin>>i;                        //Input array A
+        for(ll& i:w) cin>>i;                        //Input weights
+
+        for(i=0;i<n;++i)
+        {
+            pos[a[i]].pb(i+1);                      //Add current index i in the positions of a[i]
+
+            pre[a[i]].pb(pre[a[i]].back()+w[i]);    //Store the prefix sum of weights till current index
+        }
+
+        while(q--)
+        {
+            cin>>type;
+
+            //Type 1 Queries
+            if(type==1)
+            {
+                ll x;
+                cin>>x;
+                extra+=x;
+                continue;
+            }
+
+            //Type 2 Queries
+            ll v,l,r;
+            cin>>v>>l>>r;
+            auto lt=lower_bound(all(pos[v]),l);
+            auto rt=upper_bound(all(pos[v]),r);
+            --lt,--rt;
+            l=lt-pos[v].begin();
+            r=rt-pos[v].begin();
+            cout<<pre[v][r]-pre[v][l]+(r-l)*extra<<"\n";
+        }
+    }
+    return 0;
+}
+```
+
+</TabItem>
+</Tabs>
+
+
+### E. [Rahul and his set](https://codeforces.com/gym/298635/problem/E)
+
+<Tabs
+defaultValue="problem"
+values={[
+{ label: 'Problem', value: 'problem' },
+{ label: 'Editorial', value: 'editorial' },
+{ label: 'Code', value: 'code' },
+]}>
+<TabItem value="problem">
+
+
+Rahul has a set $S$ consisting of the first $N$ natural numbers.<br/>
+
+He thinks that 'wellness' of a subset $M$ ⊆ $S$ is equal to the maximum of $gcd(a,b)$ over all pairs $(a,b)$ such that both $a$ and $b$ are in $M$ and $a \neq b$.<br/>
+
+Rahul is an organized guy and for each $k$ ∈ {$2,3,…,N$} he wants to find a subset that has the smallest wellness among all subsets in $S$ of size $k$. There can be more than one subset with the smallest wellness and the same size, but you don't need to worry about it. Rahul wants to find all the subsets himself, but he needs your help to find the smallest possible wellness for each size $k$, will name it $I_k$.<br/>
+
+Please, help Rahul to find $I_2, I_3, ..., I_n$.<br/>
+
+**Constraints**
+
+- $2  \leq  N  \leq  5 \cdot 10^5$
+
+</TabItem>
+<TabItem value="editorial">
+
+
+Let $A=$ {$a_1,a_2,...,a_k$} be one of the possible subsets with smallest wellness. <br/>
+
+If for any number $a_i$ in $A$ not all of its divisors contained in $A$ then we can replace $a_i$ with one of its divisor.
+The size of the subset does not change and wellness may only decrease. Then we can assume that for any $a_i$ all of its divisors contained in $A$. <br/>
+
+Let $d(n)$ be the greatest divisor of $n$ exclude $n$ ($d(1)=1$). Since $A$ contains element with its divisors then smallest gcd of pair of an elements not less than maximum of $d(a_i)$ over elements of $A$ (because $A$ contains $a_i$ with $d(a_i)$). And for any element $a_i$ there is no element $a_j<a_i$ in $A$ with $gcd(a_i,a_j)>d(a_i)$ (because $d(a_i)$ is the greatest divisor). Then wellness of $A$ is equal to greatest $d(a_i)$ over elements of $A$.<br/>
+
+After this observation we can just sort elements {$1,...,n$} by theirs $d(∗)$ and take smallest $k$ for every $2\leq k \leq n$. You can calculate $d(∗)$ using the sieve of Eratosthenes.
+
+**Final time complexity**: $O(n \cdot log(n))$
+
+</TabItem>
+<TabItem value="code">
+
+
+```cpp
+#include<bits/stdc++.h>
+using namespace std;
+#define ll long long int
+#define mp map<ll,ll>
+#define pb push_back
+#define fast ios_base::sync_with_stdio(false);cin.tie(NULL);cout.tie(NULL);
+
+int32_t main(){
+
+    fast;
+
+    ll n;
+    cin>>n;
+    vector<ll> primes;
+    ll lpf[n+1];
+    for(ll i=0;i<=n;i++)
+        lpf[i] = i;
+
+    ll prime[n+1];
+    memset(prime,0,sizeof(prime));
+    prime[0] = prime[1] = 1;
+    for (ll i = 2; i < n+1; i++) {
+      if (prime[i] == 0) {
+        for (ll j = i * i; j < n+1; j += i) {
+          if (prime[j] == 0) {
+            prime[j] = i; }
+            lpf[j] = min(lpf[j],lpf[i]);
+          }
+        }
+      }
+
+
+    for (ll i = 2; i < n+1; i++) {
+      if (prime[i] == 0) {
+        prime[i] = i;
+        primes.pb(i);
+      }
+    }
+
+    mp m;
+    for(ll i=2;i<=n;i++)
+    {
+      m[i/lpf[i]]++;
+    }
+
+    for(auto i:m)
+    {
+      for(ll j=0;j<i.second;j++)
+          cout<<i.first<<" ";
+    }
+
+    return 0;
+    }
+```
+
+</TabItem>
+</Tabs>
+

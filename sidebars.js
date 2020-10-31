@@ -29,4 +29,7 @@ module.exports = {
       'roadmap/programming-techniques/programming-techniques-problems',
     ],    
   },
-};
+  contests: {
+    2020: ['contests/2020/number-theory-and-bs'],
+  },
+}
