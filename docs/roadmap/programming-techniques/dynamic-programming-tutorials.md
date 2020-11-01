@@ -36,6 +36,8 @@ You must take care of time limit and especially memory limit while using DP. Oft
 
 1. [Day 1 - Intuition for DP, Minimum coins, Fibonacci number, Longest Increasing Subsequence(LIS), Coin Change, Subset Sum Problem](https://docs.google.com/document/d/1l_dbQAeIqfNJtV0KH4aEPdbcgJvg-H2i0YHAKw2x0qo/)
 
+1. [Day 2 - Staircase climbing problem and its variations, Basics of PnC, Wildcard Matching Problem](https://docs.google.com/document/d/1CBUGWT-kswx_9u2EfharkHmiBURRDXMuGV87l26v2po/)
+
 ## Additional Resources
 
 1. A great lecture series of MIT for some standard problems of dynamic programming :
