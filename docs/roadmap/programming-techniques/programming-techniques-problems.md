@@ -28,6 +28,12 @@ Solve the easy and medium greedy problems from [hackerrank](https://www.hackerra
 10. [SPOJ - ROCK](https://www.spoj.com/problems/ROCK/)
 11. [166/E - Tetrahedron](https://codeforces.com/problemset/problem/166/E)
 12. [Codechef - PLUSMUL](https://www.codechef.com/problems/PLUSMUL/)
+13. [Atcoder - Typical Stairs](https://atcoder.jp/contests/abc129/tasks/abc129_c)
+14. [1195/C - Basketball Excercise](https://codeforces.com/problemset/problem/1195/C)
+15.[474/D - Flowers](https://codeforces.com/problemset/problem/474/D) 
+16. [Hackerrank - Wildcard Matching](https://www.hackerrank.com/contests/placement-preparation-1/challenges/string-matching-with-wildcards)
+17. [SPOJ - Edit Distance](https://www.spoj.com/problems/EDIST/)
+18. [Atcoder - Slimes](https://atcoder.jp/contests/dp/tasks/dp_n)
 
 ## Medium
 
@@ -47,3 +53,4 @@ Solve the easy and medium greedy problems from [hackerrank](https://www.hackerra
 14. [SPOJ AIBOHP](https://www.spoj.com/problems/AIBOHP/)
 15. [Codechef MATRIX2](https://www.codechef.com/problems/MATRIX2)
 16. [Codechef AMSGAME2](https://www.codechef.com/problems/AMSGAME2)
+17. [1287/C - Garland](https://codeforces.com/contest/1287/problem/C)
