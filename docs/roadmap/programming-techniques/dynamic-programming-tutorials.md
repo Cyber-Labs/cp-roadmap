@@ -38,7 +38,11 @@ You must take care of time limit and especially memory limit while using DP. Oft
 
 ## Additional Resources
 
-1. A great lecture series of MIT for some standard problems of dynamic programming :
+1. You can also learn from Digit DP, a technique used to solve problems from [this article](https://www.hackerrank.com/topics/digit-dp)
+
+2. You can also go through this [hackerrank article](https://www.hackerrank.com/topics/dynamic-programming) for many standard DP problems. 
+
+3. A great lecture series of MIT for some standard problems of dynamic programming :
 
   [Lecture 1 - Fibonacci and shortest paths](https://www.youtube.com/watch?v=OQ5jsbhAv_M&index=1&list=PLfMspJ0TLR5HRFu2kLh3U4mvStMO8QURm)
 

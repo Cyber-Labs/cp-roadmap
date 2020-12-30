@@ -28,6 +28,10 @@ module.exports = {
       'roadmap/programming-techniques/dynamic-programming-tutorials',
       'roadmap/programming-techniques/programming-techniques-problems',
     ],    
+    'Advanced': [
+      'roadmap/advanced/dp-on-graphs',
+      'roadmap/advanced/dp-with-bitmasks',
+    ],        
   },
   contests: {
     2020: ['contests/2020/number-theory-and-bs'],
