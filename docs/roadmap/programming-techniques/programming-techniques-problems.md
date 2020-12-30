@@ -24,10 +24,16 @@ Solve the easy and medium greedy problems from [hackerrank](https://www.hackerra
 7. [Hackerrank - LIS](https://www.hackerrank.com/challenges/longest-increasing-subsequent/problem)
 8. [SPOJ - Subset Sum](https://www.spoj.com/problems/MAIN72/)
 9. [Hackerrank- LCS](https://www.hackerrank.com/challenges/dynamic-programming-classics-the-longest-common-subsequence/problem)
-9. [SPOJ - EINST](https://www.spoj.com/problems/EINST/)
-10. [SPOJ - ROCK](https://www.spoj.com/problems/ROCK/)
-11. [166/E - Tetrahedron](https://codeforces.com/problemset/problem/166/E)
-12. [Codechef - PLUSMUL](https://www.codechef.com/problems/PLUSMUL/)
+10. [SPOJ - EINST](https://www.spoj.com/problems/EINST/)
+11. [SPOJ - ROCK](https://www.spoj.com/problems/ROCK/)
+12. [166/E - Tetrahedron](https://codeforces.com/problemset/problem/166/E)
+13. [Codechef - PLUSMUL](https://www.codechef.com/problems/PLUSMUL/)
+14. [Atcoder - Typical Stairs](https://atcoder.jp/contests/abc129/tasks/abc129_c)
+15. [1195/C - Basketball Excercise](https://codeforces.com/problemset/problem/1195/C)
+16. [474/D - Flowers](https://codeforces.com/problemset/problem/474/D) 
+17. [Hackerrank - Wildcard Matching](https://www.hackerrank.com/contests/placement-preparation-1/challenges/string-matching-with-wildcards)
+18. [SPOJ - Edit Distance](https://www.spoj.com/problems/EDIST/)
+19. [Atcoder - Slimes](https://atcoder.jp/contests/dp/tasks/dp_n)
 
 ## Medium
 
@@ -47,3 +53,4 @@ Solve the easy and medium greedy problems from [hackerrank](https://www.hackerra
 14. [SPOJ AIBOHP](https://www.spoj.com/problems/AIBOHP/)
 15. [Codechef MATRIX2](https://www.codechef.com/problems/MATRIX2)
 16. [Codechef AMSGAME2](https://www.codechef.com/problems/AMSGAME2)
+17. [1287/C - Garland](https://codeforces.com/contest/1287/problem/C)
