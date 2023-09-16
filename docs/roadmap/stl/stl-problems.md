@@ -36,6 +36,11 @@ description: STL practice problems by cyberlabs
 6. [1353/D - Constructing the Array](https://codeforces.com/contest/1353/problem/D)
 7. [733/D - Kostya the Sculptor](https://codeforces.com/contest/733/problem/D)
 8. [4/C - Registration system](http://codeforces.com/problemset/problem/4/C)
+9. [918/B - Radio Station](https://codeforces.com/contest/918/problem/B)
+10. [44/A - Indian Summer](https://codeforces.com/contest/44/problem/A)
+11. [855/A - Tom Riddle's Diary](https://codeforces.com/contest/44/problem/A)
+12. [903/C - Boxes Packing](https://codeforces.com/contest/903/problem/C)
+13. [987/A - Infinity Gauntlet](https://codeforces.com/contest/987/problem/A)
 
 ## Hackerearth
 
